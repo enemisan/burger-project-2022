@@ -1,0 +1,206 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat;
+}
+
+body {
+    width: 100%;
+}
+
+/* Navigation Menu */
+.navigation_menu {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    background: black;
+    z-index: 10;
+    display: grid;
+    grid-template-columns: repeat(1, 100%);
+    transform: translateX(-100%);
+    place-items: center;
+    visibility: hidden;
+    transition: all ease-in 0.3s;
+}
+
+
+.navigation_menu.show {
+    visibility: visible;
+    transform: translateX(0%);
+}
+
+.navigation_menu ul {
+    position: absolute;
+    z-index: 30;
+}
+
+.navigation_menu ul li {
+    display: block;
+    text-align: center;
+    padding: 0;
+    z-index: 30;
+    
+}
+
+.navigation_menu ul li a {
+    text-decoration: none;
+    outline: none;
+    color: white;
+    font-size: 70px;
+    line-height: .85;
+    font-weight: 900;
+    text-transform: uppercase;
+    transition: color .3s;
+}
+
+.navigation_menu ul li a:hover {
+    color: #f6c04b;
+}
+
+.cancel_icon {
+    position: absolute;
+    top: 30px;
+    right: 30px;
+    width: 30px;
+    cursor: pointer;
+    background: white;
+}
+
+.navigation_text_bg {
+    position: absolute;
+    font-size: 500px;
+    text-transform: uppercase;
+    font-weight: 900;
+    opacity: .1;
+    z-index: 1;
+    color: white;
+}
+
+
+/* Header */
+
+header {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    position: absolute;
+    padding: 30px 0;
+}
+
+header img {
+    width: 30px;
+}
+
+.logo {
+    margin-left: 30px;
+}
+
+nav {
+    margin-right: 30px;
+}
+
+ul li{
+    padding: 0 5px;
+    display: inline-block;
+}
+
+ul li#burger {
+    cursor: pointer;
+}
+
+/* Social Media */
+.social_media {
+    position: absolute;
+    right: 30px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.social_media img {
+    display: block;
+    margin: 10px 0;
+    width: 30px;
+}
+
+/* Burger Image */
+.burger_img {
+    position: absolute;
+    width: 400px;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+    transition: all 0.5s;
+    /* box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; */
+}
+
+.burger_img:hover {
+    width: 450px;
+    filter: drop-shadow(7px 10px 50px #0000005b);
+}
+
+/* Banner */
+.banner_container {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+}
+
+.banner_left {
+    width: 50%;
+    height: 100%;
+    background: black;
+    display: grid;
+    grid-template-columns: repeat(1, 100%);
+    place-items: center;
+}
+
+.banner_right {
+    width: 50%;
+    height: 100%;
+    background: url(../assets/yellow-grain-bg.png);
+    display: grid;
+    grid-template-columns: repeat(1, 100%);
+    place-items: center;
+}
+
+.banner_left div {
+    margin-right: 60px;
+    text-align: right;
+}
+
+.banner_left div h1 {
+    color: white;
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 70px;
+    line-height: .85;
+}
+
+.banner_left div button {
+    font-weight: 500;
+    text-transform: uppercase;
+    margin-top: 20px;
+    background: none;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    background: #f64b4b;
+    color: white;
+    padding: 15px 20px;
+    border-radius: 50px;
+}
+
+.banner_right h1 {
+    text-transform: uppercase;
+    font-weight: 900;
+    font-size: 70px;
+    line-height: .85;
+    margin-right: 75px;
+}
+
+.stretch {
+    transform:scale(2,1);
+    transform-origin: 0 0;
+    font-stretch: 150%;
+}
